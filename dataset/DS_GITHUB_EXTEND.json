@@ -1,0 +1,1038 @@
+[
+    {
+        "repo_name": "rth7680/qemu",
+        "bug_fixing_commit": "f779357882b4758551ff30074b4b915d7d249d3d",
+        "bug_commit_hash": [
+            "b439595a08d7"
+        ]
+    },
+    {
+        "repo_name": "rth7680/qemu",
+        "bug_fixing_commit": "4b3e4d2b43a94051b017d70461babe4e7b994aad",
+        "bug_commit_hash": [
+            "631c872614ac"
+        ]
+    },
+    {
+        "repo_name": "rth7680/qemu",
+        "bug_fixing_commit": "13af3af196c85a4bcd4399a0842f044c83bd6aa6",
+        "bug_commit_hash": [
+            "83b4613ba83"
+        ]
+    },
+    {
+        "repo_name": "rth7680/qemu",
+        "bug_fixing_commit": "fdf029762f50101a3d7927d8db1be015e00f441c",
+        "bug_commit_hash": [
+            "d3c6369a96"
+        ]
+    },
+    {
+        "repo_name": "FFmpeg/FFmpeg",
+        "bug_fixing_commit": "59686eaf336a71f2e9297f1f2df4587ea9dc76a0",
+        "bug_commit_hash": [
+            "732fb122e66"
+        ]
+    },
+    {
+        "repo_name": "FFmpeg/FFmpeg",
+        "bug_fixing_commit": "8c62d77139ca07390414fcfd26b2a4d506fed3b9",
+        "bug_commit_hash": [
+            "0ba05857"
+        ]
+    },
+    {
+        "repo_name": "dougbinks/glfw",
+        "bug_fixing_commit": "8e9a5d29a8258d2e82250102db9ae713794be321",
+        "bug_commit_hash": [
+            "0d599026d04ddcc2695ae938fc1864523dab7a34"
+        ]
+    },
+    {
+        "repo_name": "dougbinks/glfw",
+        "bug_fixing_commit": "4e8c4901e9985765a3951423ff9174459339a62b",
+        "bug_commit_hash": [
+            "9fdc425931888ea70bc095e53cc006fca8ccb703"
+        ]
+    },
+    {
+        "repo_name": "emutos/emutos",
+        "bug_fixing_commit": "d603622d2256d593066d8fd577f41e022864c766",
+        "bug_commit_hash": [
+            "75f1af4"
+        ]
+    },
+    {
+        "repo_name": "plt/racket",
+        "bug_fixing_commit": "a220d4da4d846a50f4da93a9771e277241cdaac9",
+        "bug_commit_hash": [
+            "3b5b0a7"
+        ]
+    },
+    {
+        "repo_name": "asterisk/asterisk",
+        "bug_fixing_commit": "fa3922a4d28860d415614347d9f06c233d2beb07",
+        "bug_commit_hash": [
+            "424be345639d75c6cb7d0bd2da5f0f407dbd0bd5"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "fdf759e3ae0d190c533f6e38decd3be8c53f46cc",
+        "bug_commit_hash": [
+            "6b7d5b6eaf9029b88771ae0ba3cf3c95adb3c24d"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "02dd646b16c2c1339197f69e96d2395c7d5357a8",
+        "bug_commit_hash": [
+            "705a415f684f8e9ee19983e5859de00bbb1477cb"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "1cdd8b1b66ec478ea2ed81ffa371e93f4b27c61e",
+        "bug_commit_hash": [
+            "afdf6c3b6040ef43b05428b834f0f302c8ce9a1b"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "738ad08b0db11d7e66c14ff4b9852cf16abf3aa9",
+        "bug_commit_hash": [
+            "427d9c34e61a8f5bfe369f1d5a0426143fe5741e"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "1e8c0c671e3076db811804343b3b8d744bcf27ac",
+        "bug_commit_hash": [
+            "e44f06065bf20e8d0e4adacff61350ebd36f299e"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "e188243d1f8c8ccdc11ca8d46ef86dba76d1bf50",
+        "bug_commit_hash": [
+            "86a66e9b95048b1a3a4e297ba2884afcedd1585e"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "90db1582a97d048769198ee1c0f367d003eeb130",
+        "bug_commit_hash": [
+            "8157cc0e3e33c97b406cc088cf001ca524154f64"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "a4675155190d7c17dc0fa6be9134837f32ad519a",
+        "bug_commit_hash": [
+            "e44f06065bf20e8d0e4adacff61350ebd36f299e"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "3b1b2d4e3d544c593399e914fd1c3a5f61d7e827",
+        "bug_commit_hash": [
+            "1ddb263d21099ae42195c2bc382bdf72a7f24f82"
+        ]
+    },
+    {
+        "repo_name": "anitazha/systemd",
+        "bug_fixing_commit": "fb45ced36802b98c24a8238d68bb86be7fa393e4",
+        "bug_commit_hash": [
+            "4d6437d33c45c3d31497f2e3bd8d415f775546b8"
+        ]
+    },
+    {
+        "repo_name": "u-boot/u-boot",
+        "bug_fixing_commit": "741d1e9d3f368908e3cd1861ddd707e81e1fd576",
+        "bug_commit_hash": [
+            "6a8c2f9781c"
+        ]
+    },
+    {
+        "repo_name": "u-boot/u-boot",
+        "bug_fixing_commit": "fac5308d275720b67b442383572a84edb212d6a1",
+        "bug_commit_hash": [
+            "7d1a10659f5b"
+        ]
+    },
+    {
+        "repo_name": "u-boot/u-boot",
+        "bug_fixing_commit": "7481632b192f61b5bcb028c885a460d8b9c2731c",
+        "bug_commit_hash": [
+            "51bb33846ad2"
+        ]
+    },
+    {
+        "repo_name": "u-boot/u-boot",
+        "bug_fixing_commit": "836b7f447429960fa6ff8b6d25c11e39b8c00b94",
+        "bug_commit_hash": [
+            "1b15483deb3f"
+        ]
+    },
+    {
+        "repo_name": "u-boot/u-boot",
+        "bug_fixing_commit": "6b929e9f3c16bbddeffb85351e93db13eaa9b57d",
+        "bug_commit_hash": [
+            "4e8aa0065d4b"
+        ]
+    },
+    {
+        "repo_name": "erlang/otp",
+        "bug_fixing_commit": "463ca906017cfc1e02fac57ed870a97225fd4c04",
+        "bug_commit_hash": [
+            "046dbde"
+        ]
+    },
+    {
+        "repo_name": "erlang/otp",
+        "bug_fixing_commit": "845adc7375b221359e387e3837fb5b2242fecaa5",
+        "bug_commit_hash": [
+            "046dbde"
+        ]
+    },
+    {
+        "repo_name": "erlang/otp",
+        "bug_fixing_commit": "3ab2cc66a5c5abb049aec20043b45e428ece6d9a",
+        "bug_commit_hash": [
+            "67c52b69250ebf"
+        ]
+    },
+    {
+        "repo_name": "erlang/otp",
+        "bug_fixing_commit": "2c0f7ae7a53ecd5ca3472f0c18a12281685c0de0",
+        "bug_commit_hash": [
+            "8cd93d05c32a7fb5d4551d9b0202571a585afac3"
+        ]
+    },
+    {
+        "repo_name": "erlang/otp",
+        "bug_fixing_commit": "7e89858e594c017db479e501de4b0a9564684250",
+        "bug_commit_hash": [
+            "70789d1"
+        ]
+    },
+    {
+        "repo_name": "miniupnp/miniupnp",
+        "bug_fixing_commit": "e98515ac5e68a7fc1134f9bc8d746e52ccd21790",
+        "bug_commit_hash": [
+            "c801138c6355f2744f2c09d5e71aeefed1b84527"
+        ]
+    },
+    {
+        "repo_name": "miniupnp/miniupnp",
+        "bug_fixing_commit": "ef8382360c6eea05079551ea165c7bb5a125f358",
+        "bug_commit_hash": [
+            "c0a50ce33e3b99ce8a96fd43049bb5b53ffac62f"
+        ]
+    },
+    {
+        "repo_name": "bminor/musl",
+        "bug_fixing_commit": "6f666231bf51703fadbef10460d462fb573548a1",
+        "bug_commit_hash": [
+            "f47a8cdd250d9163fcfb39bf4e9d813957c0b187"
+        ]
+    },
+    {
+        "repo_name": "SchedMD/slurm",
+        "bug_fixing_commit": "2291678f8285be000300c146cb67984cc089d899",
+        "bug_commit_hash": [
+            "d977b988242"
+        ]
+    },
+    {
+        "repo_name": "SchedMD/slurm",
+        "bug_fixing_commit": "8a2d28a7e8f40adcb84e3661d9593f850b407047",
+        "bug_commit_hash": [
+            "f0ecfa9ac0"
+        ]
+    },
+    {
+        "repo_name": "SchedMD/slurm",
+        "bug_fixing_commit": "af083088ef751e80eee4c2b79e7e41573341cbca",
+        "bug_commit_hash": [
+            "970abef4c7"
+        ]
+    },
+    {
+        "repo_name": "open-mpi/ompi",
+        "bug_fixing_commit": "5946f8c7a902aa7c8a723d8a98ce2a171cc3c6ef",
+        "bug_commit_hash": [
+            "4002fbc9796c3e6c4a90ae6e85fa7b391ecb1d09"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "334d8f83207aee22a729c0b72cda455271d9976f",
+        "bug_commit_hash": [
+            "0673bddf"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "586b33e5ae31403fe8ed8934ee3216c3c6f7d984",
+        "bug_commit_hash": [
+            "2543c4ec"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "ebc2719151ddc9100b225616349e4dc4a886c7c9",
+        "bug_commit_hash": [
+            "93b54873"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "9e8e8d1e14a07da568709e5eb206c1182003054b",
+        "bug_commit_hash": [
+            "ea708a04"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "5953934f1238518859832bff9ba4829a7d281830",
+        "bug_commit_hash": [
+            "b4f3e5bd"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "da099a02b860c2385a55a92a392d8cac21b2e129",
+        "bug_commit_hash": [
+            "48e63767"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "05ebaaf712cfe11a77b3290143426cbce441e4ee",
+        "bug_commit_hash": [
+            "c08973cc"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "2a6458e9c549e3e8cf69db9a8e8bfa8f831fd540",
+        "bug_commit_hash": [
+            "9bde5ef1"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "d3193e43cf6fd481457cbd466516db5a0bb713d6",
+        "bug_commit_hash": [
+            "3cb327e6"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "986b171d602acd5e996f625bd6d7686ebd1cf72b",
+        "bug_commit_hash": [
+            "6cd46593"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "3a23cddd0e680e7800ed13b051413b21523221a4",
+        "bug_commit_hash": [
+            "26804e87"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "1c61d53b8ae6cc1274f56c305d31b4072817bb07",
+        "bug_commit_hash": [
+            "30ebb986"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "d8a2a81a6c949fea88448ddcc76cee0a3e982061",
+        "bug_commit_hash": [
+            "c3419d92"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "db3f2d021bf87a4c803238dba34b13075fca614c",
+        "bug_commit_hash": [
+            "34b4eb9"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "630bd1aa29e37947b28e72a2ab8075bc6f3fa3e5",
+        "bug_commit_hash": [
+            "87fe5951"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "3ec2cd66368b282b287b4d3e291fb5e4d70afd4a",
+        "bug_commit_hash": [
+            "3231cfd8"
+        ]
+    },
+    {
+        "repo_name": "gpac/gpac",
+        "bug_fixing_commit": "9d21883fa4b21ac76e099e6177ec76d7d6756bae",
+        "bug_commit_hash": [
+            "7dc0aca8"
+        ]
+    },
+    {
+        "repo_name": "GNOME/mutter",
+        "bug_fixing_commit": "9399c984cca45f5d3cecf337c3dbe62c2d4470f7",
+        "bug_commit_hash": [
+            "00bb4190b"
+        ]
+    },
+    {
+        "repo_name": "GNOME/mutter",
+        "bug_fixing_commit": "e8116ba4f0be6a198627f6c4f3d1a859ec853c04",
+        "bug_commit_hash": [
+            "f4c6fa949debc1f11e73de9228415f4b72e02286"
+        ]
+    },
+    {
+        "repo_name": "GNOME/mutter",
+        "bug_fixing_commit": "57e16cf010d64776ce44ad92d31e71ddab13640d",
+        "bug_commit_hash": [
+            "0e736af301"
+        ]
+    },
+    {
+        "repo_name": "craigbarnes/dte",
+        "bug_fixing_commit": "0d27067c7dcf35e7f15e534b03e74467c9d06303",
+        "bug_commit_hash": [
+            "4df5fce16ceb245b"
+        ]
+    },
+    {
+        "repo_name": "analogdevicesinc/libiio",
+        "bug_fixing_commit": "1b1258d8d33025e2de5581b472fa8ca6e0c7c26e",
+        "bug_commit_hash": [
+            "99688f2dcc19"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "28af4238ff859c820205f7d850833b1b793f6e04",
+        "bug_commit_hash": [
+            "fd20e2d9"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "c815f1cf1bd00e3d32880c1db0dd50e98dab83db",
+        "bug_commit_hash": [
+            "fd20e2d900"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "99e3ef6a938d96c2f6de748e175ebde642646a07",
+        "bug_commit_hash": [
+            "fd20e2d900"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "346647f1fd517752cffea595cc67ee8be67555e7",
+        "bug_commit_hash": [
+            "fd20e2d"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "9e481b283b72e61091187195b143b59067331bca",
+        "bug_commit_hash": [
+            "cd14099b"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "31aa22ed0c5c1e327afbd16f7d3efe8819f3bf91",
+        "bug_commit_hash": [
+            "1a94571"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "c1128ed9ebe9c36970849f6be8107551c22822eb",
+        "bug_commit_hash": [
+            "4c638752f2eebc34b1b52c801cdff159353f2b5b"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "e72671bdbfd48a3fbebd49cae7d2b82b66a7e1b9",
+        "bug_commit_hash": [
+            "4c638752f2eebc34b1b52c801cdff159353f2b5b"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "c70dfcfa8883d208acfafd9201c5da34004da6e6",
+        "bug_commit_hash": [
+            "d63e81e8"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "dd6544686735d757676f9442a2b5bb2c2e23f30a",
+        "bug_commit_hash": [
+            "1c2ac278"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "2aed45f6ea192e863b0bb99a1695a263c7e91c72",
+        "bug_commit_hash": [
+            "ae32ef6b"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "0420ee0a6d00ec483637f1acf9299ea7421cc89c",
+        "bug_commit_hash": [
+            "85a28d172"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "4252409ce111d54f5c161fd9e28eda52c3caa1ad",
+        "bug_commit_hash": [
+            "d1260f95"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "440bccd3666b5a85f216604dff049aed36a58e94",
+        "bug_commit_hash": [
+            "d520c2d"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "32c494f567f6a86926a2efe4b48fde23b75782f3",
+        "bug_commit_hash": [
+            "2296b8cc"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "b891b00a1f2dfef03c7786782383ab3debe11765",
+        "bug_commit_hash": [
+            "79f9c300"
+        ]
+    },
+    {
+        "repo_name": "code-saturne/code_saturne",
+        "bug_fixing_commit": "16c7112234e0d52249938e31bafc5710eba840bb",
+        "bug_commit_hash": [
+            "d6f5e853"
+        ]
+    },
+    {
+        "repo_name": "paulusmack/ppp",
+        "bug_fixing_commit": "2aff1c5e6fecc6de2dae3d3dee422d7a1064ab33",
+        "bug_commit_hash": [
+            "d1506f182ba8"
+        ]
+    },
+    {
+        "repo_name": "sbabic/swupdate",
+        "bug_fixing_commit": "6b9a6bb96bacc565b0f9b0e7b610ccd0f48b7041",
+        "bug_commit_hash": [
+            "9ef80aefd354"
+        ]
+    },
+    {
+        "repo_name": "mongodb/mongo-php-driver",
+        "bug_fixing_commit": "3db1260e74a61c9245e48c7c65ac3f448b15e5b3",
+        "bug_commit_hash": [
+            "6887226d34566cd772bbacb34e10fc7bd4000f57"
+        ]
+    },
+    {
+        "repo_name": "0lvin/yquake2",
+        "bug_fixing_commit": "c1920e3ec4111ba9a4432033367660a8efb33e23",
+        "bug_commit_hash": [
+            "e61d9444c"
+        ]
+    },
+    {
+        "repo_name": "crate/crate",
+        "bug_fixing_commit": "72e5bf8d32c07dad096f4656faa04283758efc00",
+        "bug_commit_hash": [
+            "b0016d5"
+        ]
+    },
+    {
+        "repo_name": "crate/crate",
+        "bug_fixing_commit": "23e49cc641533591502e6b225f0c4290585f343e",
+        "bug_commit_hash": [
+            "4428eb1555069f2325277ee99bd271af651b8425"
+        ]
+    },
+    {
+        "repo_name": "wireshark/wireshark",
+        "bug_fixing_commit": "77ea80001e65f7ad39e7c55521b780c5457163e1",
+        "bug_commit_hash": [
+            "036f2e12"
+        ]
+    },
+    {
+        "repo_name": "wireshark/wireshark",
+        "bug_fixing_commit": "2e0d1b8da0dbc2d85d6226b878a06a0b7a371596",
+        "bug_commit_hash": [
+            "411babf0832e7a2138418f82a5842a459d481d9b"
+        ]
+    },
+    {
+        "repo_name": "fwupd/fwupd",
+        "bug_fixing_commit": "b789b947feabc45f4cbbedf6e4c3e25be61c0816",
+        "bug_commit_hash": [
+            "e91c88"
+        ]
+    },
+    {
+        "repo_name": "OpenSC/OpenSC",
+        "bug_fixing_commit": "3331171431610cf537831862baf180ae94993bdc",
+        "bug_commit_hash": [
+            "a0eb0553de8ac33d8ee893c4caf911e7516efaed"
+        ]
+    },
+    {
+        "repo_name": "cyrusimap/cyrus-imapd",
+        "bug_fixing_commit": "b6470e4098c57f73b8db8134aa8f439a3732f4c8",
+        "bug_commit_hash": [
+            "e14ef0ad88303450"
+        ]
+    },
+    {
+        "repo_name": "jaamsim/jaamsim",
+        "bug_fixing_commit": "b1e3db5fb2c833e2e631c2932713d628d877f9d9",
+        "bug_commit_hash": [
+            "9e89fc6c1fc522327b0bea270a024f51ff5b120c"
+        ]
+    },
+    {
+        "repo_name": "Subsurface-divelog/subsurface",
+        "bug_fixing_commit": "8b5812bc2c99fc603a59bf4d3fd6c776dc418db2",
+        "bug_commit_hash": [
+            "505e4e47eb"
+        ]
+    },
+    {
+        "repo_name": "Subsurface-divelog/subsurface",
+        "bug_fixing_commit": "32a08735c3b5bff4c8cf74bd7bc81662b8fd7bdb",
+        "bug_commit_hash": [
+            "ae299d5e663cd672d1114c3fe90cf026b9ab463e"
+        ]
+    },
+    {
+        "repo_name": "Subsurface-divelog/subsurface",
+        "bug_fixing_commit": "6880937838acad81a5c24d62fed71c5c7fad1d54",
+        "bug_commit_hash": [
+            "da7ea17b66"
+        ]
+    },
+    {
+        "repo_name": "GNOME/gtk",
+        "bug_fixing_commit": "93c5fb0b31ce2cf9a5058878a8f4106e0317dab0",
+        "bug_commit_hash": [
+            "b9487997"
+        ]
+    },
+    {
+        "repo_name": "GNOME/gtk",
+        "bug_fixing_commit": "68b05cadd860123333ada1bfd59b741062b216f8",
+        "bug_commit_hash": [
+            "a4cc95b2"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "4a2660aa455e3496eadb9c3cb661245c07c7a3bb",
+        "bug_commit_hash": [
+            "8073094bf"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "92da3accfd2e40fda949a43958d797bf5d5ac07b",
+        "bug_commit_hash": [
+            "3df6a60113773d8abff3457c7a06e30c1892b7dc"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "691f4cf449c700c7abedb845557d39cd788264b0",
+        "bug_commit_hash": [
+            "5ff7d2276"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "ef9a1957424e9fcf147abe4fcceff5d6c809f945",
+        "bug_commit_hash": [
+            "7f80eb23"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "eec3911e64a1638c31fd55482aec8f8f770d02c8",
+        "bug_commit_hash": [
+            "b40542000d"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "a583c3e940d5f34e6bf4a3850abd5c9026e81658",
+        "bug_commit_hash": [
+            "fafa34e5f"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "966a18e2b485901bd986ebe65670dc4bfbfe65b5",
+        "bug_commit_hash": [
+            "f89ba27caa"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "3811c1de25bd8b05fb4684614883a0f04f304978",
+        "bug_commit_hash": [
+            "c886fb58eb"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "123a9e7d83213bcc0478840bab2270113275fb0a",
+        "bug_commit_hash": [
+            "2421c6fa7d"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "b4db3be86e03ec31055303d46056223bb989472e",
+        "bug_commit_hash": [
+            "4bcfe30414005323a8d4ab986bce92bb736b59df"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "7eb7ae283557d8467403b9db35605861a0870add",
+        "bug_commit_hash": [
+            "b9c87f8082"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "72c23bd4cd3ee3a79955fbdd601206a9fa7d19eb",
+        "bug_commit_hash": [
+            "6f1296b5c7"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "a13989f109033e7139c58fdc78c35ef02576d788",
+        "bug_commit_hash": [
+            "ad6b13d3177945bf6a85d6dc5af80b8e34ea6191"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "220386ae4055832529e50063ade5a58db823be71",
+        "bug_commit_hash": [
+            "5c4519934708bfe6a26b9ad0cc93a8c5c87df112"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "598c7f164c11d39eae0138b64967b6646a2d7fa9",
+        "bug_commit_hash": [
+            "0011c25144"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "ba9f905da978afafb81ceb4277af2a886e6ca616",
+        "bug_commit_hash": [
+            "167e38e0e0296e899aa894d2f3db5ba2a0c68cb5"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "60edfabc7b0fede810ed5fe414fff95f7d6b0944",
+        "bug_commit_hash": [
+            "b2bb925"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "d7610e6dded19223a4c796c55565f5c57cb912d5",
+        "bug_commit_hash": [
+            "c31499d74"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "7223296092c72c2b10729a6da218897887858dba",
+        "bug_commit_hash": [
+            "b4db3be86e"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "f31a4e302e2c24409fbf7bd2d30aa221968eb7a6",
+        "bug_commit_hash": [
+            "65ae1347c7"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "b15f6dfae871f6ebfefa8a4e89958c1c70078e09",
+        "bug_commit_hash": [
+            "c5bff8e550"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "d8c2f5c586cff21448c510ea40dc50b3e412294f",
+        "bug_commit_hash": [
+            "d865935f32"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "ffe0874cfba4a165eb489deacc45d562d668ef68",
+        "bug_commit_hash": [
+            "9b78e33837"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "d43f0e7f5a8c3f3d26de7032fc74ea92d8fa0e34",
+        "bug_commit_hash": [
+            "9425aeaffb"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "51f9f6cfd49d816017ffbac884c0b5b88cc67e32",
+        "bug_commit_hash": [
+            "dd58dff1e6"
+        ]
+    },
+    {
+        "repo_name": "haproxy/haproxy",
+        "bug_fixing_commit": "a63f2cde948e4d8049c961e94029b1fd2752a71d",
+        "bug_commit_hash": [
+            "30fcca18"
+        ]
+    },
+    {
+        "repo_name": "reactos/reactos",
+        "bug_fixing_commit": "0c612980ac9699c329035fe25753a52650e28ff3",
+        "bug_commit_hash": [
+            "c7e09061ca"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "37b1c2871cb7f07d127ef5ba969a9921f5b87905",
+        "bug_commit_hash": [
+            "98b38e89ba054"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "e985e722afc606be306b2d3f730d902eabb17cc6",
+        "bug_commit_hash": [
+            "0704ebb778d4"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "f7e4479a2aa341dc1713fef59c84912382d41d3f",
+        "bug_commit_hash": [
+            "2e31751d163d"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "46891f23a74c401ad9613b875153819849d17925",
+        "bug_commit_hash": [
+            "fa97cc0c12e9"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "d08dbcbf09842a0223887364f2b80caf3c23f129",
+        "bug_commit_hash": [
+            "2e3c81deea50"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "0510ffa07afd84a70c9c6f1a4c28aacd73a393d6",
+        "bug_commit_hash": [
+            "71de4b2c9217"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "0502a1f5249e4f1d14ef6e24628071fc712b7f14",
+        "bug_commit_hash": [
+            "c13b3a31"
+        ]
+    },
+    {
+        "repo_name": "tarantool/tarantool",
+        "bug_fixing_commit": "2cfba5eba88924bd1200c17b647f8558353c260c",
+        "bug_commit_hash": [
+            "fc3834c01e9e6"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "3fde2d307306b2f785501f4aeb05afcdadd2a2d4",
+        "bug_commit_hash": [
+            "ae265ea96e"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "e51c47bf4338aebd0b3b76c653d8082739bb8a2b",
+        "bug_commit_hash": [
+            "e39d98302d9f"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "575eb123e907f7f70ac64c6de72b1282a2590bc1",
+        "bug_commit_hash": [
+            "3fbf12487c6c01c488210bc56b0f342f07098df9"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "16337e8fed6063d7a1c57e34a8609dac610c1c37",
+        "bug_commit_hash": [
+            "26c8776c70ea"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "a487addc615d6b28fb4b106fb5407eed42c5c214",
+        "bug_commit_hash": [
+            "a1358aaedf0d10d5c105a7b0d79e48f16be6cacf"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "08aa504e661f5ebededed008b9320823f6387d42",
+        "bug_commit_hash": [
+            "080d51bb"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "b287ad70f860170453ed8834cd2b151a2d30bb0a",
+        "bug_commit_hash": [
+            "b668296a"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "fe4f002eefc45f44126a18a73c71d14789fff890",
+        "bug_commit_hash": [
+            "08a51bae"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "c36b1039bee165b392c308a2c93b39c59bb0573f",
+        "bug_commit_hash": [
+            "ae951f5f"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "4cd0dee7ccb8784c649e86f05a9e1ce51e4c12a5",
+        "bug_commit_hash": [
+            "adcdf64a"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "9d18a7cf90d00bda636d6fd01d84156c9d11cd0d",
+        "bug_commit_hash": [
+            "85a7b27f97713cb917258ac0a276c851a614c5a6"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "5919bd988b9dfb40a6b4ab5a3fd4af2dccda3c95",
+        "bug_commit_hash": [
+            "89679cd9754"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "a99185fa8e9bd28832356951e6c2d5a0467ab7c0",
+        "bug_commit_hash": [
+            "606825551203"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "c2f35a416845764eaa48ecfb70389545c72623de",
+        "bug_commit_hash": [
+            "537d5c310c3e9d22f1df9a6d0bd1e250c84216fb"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "a568acbfeaeb6f18a956d8cfc0c30173d10adc1a",
+        "bug_commit_hash": [
+            "11bae5cfa95b"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "2a4417bb8ef154a3ea17ab69f1e6bf695d5df41d",
+        "bug_commit_hash": [
+            "e90c89d45311aed6612113cf6bfdce652bba250d"
+        ]
+    },
+    {
+        "repo_name": "zephyrproject-rtos/zephyr",
+        "bug_fixing_commit": "a1550c4db17f4541d78a1c8c7eba47541df4d7a0",
+        "bug_commit_hash": [
+            "709b2e44bfd"
+        ]
+    },
+    {
+        "repo_name": "pyrocko/pyrocko",
+        "bug_fixing_commit": "20e8f0aa9e3c7f9ef509e1f686a5241077045adc",
+        "bug_commit_hash": [
+            "72602a208ce0033b339237a7709922ba49ad6e32"
+        ]
+    },
+    {
+        "repo_name": "pyrocko/pyrocko",
+        "bug_fixing_commit": "9bc52374e6fa618b457e76264080e450e0f03043",
+        "bug_commit_hash": [
+            "8774d7096a2d181c0b6092bd9655c3764c79d5e4"
+        ]
+    }
+]
