@@ -2,8 +2,8 @@ import json
 import os
 
 # Configuration
-VFC_JSONL_FILE = "your_vfc_file.jsonl"  # Path to your VFC JSONL file
-REPO_NAME = "your-repo-name"  # e.g., "linux", "FFmpeg", "openssl", etc.
+VFC_JSONL_FILE = "C:\\Users\\minhq\\Downloads\\vfc_cvefixes.jsonl"  # Path to your VFC JSONL file
+REPO_NAME = "cve"  # e.g., "linux", "FFmpeg", "openssl", etc.
 OUTPUT_FILE = "dataset/vfc_dataset.json"
 
 def convert_vfc_to_dataset(vfc_file, repo_name, output_file):
