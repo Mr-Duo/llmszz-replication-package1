@@ -1,9 +1,9 @@
 import os
 
 # enter your current working directory, absolute path.
-CWD = ""
+CWD = "C:\\Users\\minhq\\Documents\\GitHub\\llmszz-replication-package1"
 # enter your directory which saves all repos
-REPOS_DIR = ""
+REPOS_DIR = "C:\\Users\\minhq\\Documents\\GitHub"
 
 DATASET_DIR = os.path.join(CWD,'dataset')
 SAVE_LOG_DIR = os.path.join(CWD,'save_logs')
