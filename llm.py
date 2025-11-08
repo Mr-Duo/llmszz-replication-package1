@@ -6,6 +6,7 @@ class Client:
     def __init__(self) -> None:
         self.call_cnt = 0
         self.token_cost = 0
+        # DeepSeek uses similar tokenization to GPT models
         self.tokenizer = tiktoken.encoding_for_model("gpt-4o")
 
     def call_llm(self, all_msgs, log_msgs, pipeline=None, openai_key=None):
@@ -32,12 +33,15 @@ class Client:
             
             tokens = self.tokenizer.encode(str(all_msgs))
             self.token_cost = self.token_cost + len(tokens)
-            # enter your api key here
+            # DeepSeek API configuration
             client = OpenAI(
-                api_key=""
+                api_key="sk-e85413b4e9f64cb480862b0a86d973d8",  # Replace with your DeepSeek API key
+                base_url="https://api.deepseek.com"
             )
             completion = client.chat.completions.create(
-                model="gpt-4o-mini", messages=all_msgs, temperature=0.0
+                model="deepseek-chat",  # Using DeepSeek's chat model
+                messages=all_msgs, 
+                temperature=0.0
             )
             tokens = self.tokenizer.encode(completion.choices[0].message.content)
             self.token_cost = self.token_cost + len(tokens)
