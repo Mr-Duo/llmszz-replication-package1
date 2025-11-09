@@ -13,7 +13,7 @@ from prompts import *
 from util import *
 
 # Configuration - Update this to point to your VFC dataset
-VFC_DATASET_FILE = "vfc_using_msg_regex.jsonl"  # File created by convert_vfc_to_dataset.py
+VFC_DATASET_FILE = "vfc_using_msg_regex_dataset.json"  # Converted dataset file (not .jsonl)
 
 # Load VFC data
 all_info = []
