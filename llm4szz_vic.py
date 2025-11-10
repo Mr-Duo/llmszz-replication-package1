@@ -30,6 +30,7 @@ deal_cids = []
 errs_info = []
 dealed_infos = []
 vic_results = []  # Store VIC discoveries
+file_statistics = []  # Track statistics for each file
 pipeline = None
 
 # Run analysis (3 iterations for robustness)
@@ -778,6 +779,24 @@ for cnt in range(0, 3):
             with open(os.path.join(CWD, "deal_infos.json"), "w") as f:
                 json.dump(dealed_infos, f)
             
+            # Track statistics for this file
+            vic_found = len(s2_final_cid) > 0 if 's2_final_cid' in locals() else False
+            file_stat = {
+                "repo_name": repo_name,
+                "commit_id": cid,
+                "iteration": cnt,
+                "tokens_used": client.token_cost,
+                "llm_calls": client.get_call_cnt(),
+                "time_seconds": elapsed_time,
+                "vic_found": vic_found,
+                "vic_commits": s2_final_cid if vic_found else []
+            }
+            file_statistics.append(file_stat)
+            
+            # Save statistics after each file
+            with open(os.path.join(CWD, "file_statistics.json"), "w") as f:
+                json.dump(file_statistics, f, indent=2)
+            
             print(f"  Time: {elapsed_time:.1f}s | Tokens: {client.token_cost} | LLM calls: {client.get_call_cnt()}")
 
 # Save VIC summary
@@ -785,9 +804,34 @@ vic_summary_path = os.path.join(CWD, "vic_results.json")
 with open(vic_summary_path, "w") as f:
     json.dump(vic_results, f, indent=2)
 
+# Calculate and display statistics summary
+total_files = len(file_statistics)
+total_tokens = sum(s['tokens_used'] for s in file_statistics)
+total_time = sum(s['time_seconds'] for s in file_statistics)
+total_calls = sum(s['llm_calls'] for s in file_statistics)
+vics_found = sum(1 for s in file_statistics if s['vic_found'])
+
+# GPT-4o-mini pricing
+avg_cost_per_token = (0.150 + 0.600) / 2 / 1_000_000
+estimated_cost = total_tokens * avg_cost_per_token
+
 print(f"\n{'='*60}")
 print(f"Analysis complete!")
 print(f"VIC results saved to: {vic_summary_path}")
 print(f"Detailed logs saved to: {SAVE_LOG_DIR}")
 print(f"Total VICs discovered: {len([v for v in vic_results if v['vic']])}")
+print(f"\n{'='*60}")
+print(f"STATISTICS SUMMARY:")
+print(f"{'='*60}")
+print(f"Total files processed: {total_files}")
+print(f"VICs found: {vics_found} ({vics_found/total_files*100:.1f}%)")
+print(f"Total tokens used: {total_tokens:,}")
+print(f"Total LLM calls: {total_calls:,}")
+print(f"Total time: {total_time:.2f}s ({total_time/60:.2f} min)")
+print(f"Estimated cost: ${estimated_cost:.2f}")
+print(f"\nAverage per file:")
+print(f"  Tokens: {total_tokens/total_files:,.0f}")
+print(f"  Time: {total_time/total_files:.2f}s")
+print(f"  LLM calls: {total_calls/total_files:.1f}")
+print(f"  Cost: ${estimated_cost/total_files:.4f}")
 print(f"{'='*60}")
