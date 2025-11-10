@@ -15,6 +15,9 @@ errs_info = []
 dealed_infos = []
 pipeline = None
 
+# Statistics tracking for each file
+file_statistics = []
+
 
 
 for cnt in range(0, 3):
@@ -793,4 +796,22 @@ for cnt in range(0, 3):
             dealed_infos.append(info)
             with open(os.path.join(CWD, "deal_infos.json"), "w") as f:
                 json.dump(dealed_infos, f)
+            
+            # Track statistics for this file
+            file_stat = {
+                "repo_name": repo_name,
+                "commit_id": cid,
+                "iteration": cnt,
+                "tokens_used": client.token_cost,
+                "llm_calls": client.get_call_cnt(),
+                "time_seconds": elapsed_time,
+                "success": "can_determine" not in str(log_msgs) or log_msgs[-4].get("can_determine", False)
+            }
+            file_statistics.append(file_stat)
+            
+            # Save statistics after each file
+            with open(os.path.join(CWD, "file_statistics.json"), "w") as f:
+                json.dump(file_statistics, f, indent=2)
+            
+            print(f"File stats - Tokens: {client.token_cost}, Time: {elapsed_time:.2f}s, Calls: {client.get_call_cnt()}")
 
