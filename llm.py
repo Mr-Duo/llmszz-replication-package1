@@ -1,19 +1,43 @@
 from openai import OpenAI
 import tiktoken
 import os
+import sys
 
 # Try to load from Kaggle secrets first, then .env file
+OPENAI_API_KEY = None
+
 try:
     from kaggle_secrets import UserSecretsClient
     user_secrets = UserSecretsClient()
     OPENAI_API_KEY = user_secrets.get_secret("OPENAI_API_KEY")
-    print("✓ Loaded API key from Kaggle Secrets")
-except:
+    print("✓ Loaded OPENAI_API_KEY from Kaggle Secrets")
+except Exception as e:
     # Fall back to .env file for local development
-    from dotenv import load_dotenv
-    load_dotenv()
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    print("✓ Loaded API key from .env file")
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+        if OPENAI_API_KEY:
+            print("✓ Loaded OPENAI_API_KEY from .env file")
+        else:
+            print("⚠ Warning: .env file found but OPENAI_API_KEY is empty")
+    except Exception as e2:
+        print(f"⚠ Warning: Could not load .env file: {e2}")
+
+# Validate API key is available
+if not OPENAI_API_KEY:
+    print("\n" + "="*60)
+    print("ERROR: OPENAI_API_KEY not found!")
+    print("="*60)
+    print("\nFor Kaggle:")
+    print("  1. Click 'Add-ons' → 'Secrets' in the right sidebar")
+    print("  2. Add a new secret with label: OPENAI_API_KEY")
+    print("  3. Paste your OpenAI API key as the value")
+    print("\nFor Local Development:")
+    print("  1. Create a .env file in the project root")
+    print("  2. Add: OPENAI_API_KEY=sk-proj-your-key-here")
+    print("="*60 + "\n")
+    sys.exit(1)
 
 
 class Client:
