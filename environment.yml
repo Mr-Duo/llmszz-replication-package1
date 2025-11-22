@@ -147,4 +147,5 @@ dependencies:
       - urllib3==2.2.2
       - wcwidth==0.2.13
       - zipp==3.19.2
+      - python-dotenv==1.0.0
 prefix: /data1/lingxiaotang/conda/envs/llmszz

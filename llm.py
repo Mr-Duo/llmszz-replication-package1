@@ -1,10 +1,19 @@
 from openai import OpenAI
 import tiktoken
 import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Try to load from Kaggle secrets first, then .env file
+try:
+    from kaggle_secrets import UserSecretsClient
+    user_secrets = UserSecretsClient()
+    OPENAI_API_KEY = user_secrets.get_secret("OPENAI_API_KEY")
+    print("✓ Loaded API key from Kaggle Secrets")
+except:
+    # Fall back to .env file for local development
+    from dotenv import load_dotenv
+    load_dotenv()
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    print("✓ Loaded API key from .env file")
 
 
 class Client:
@@ -40,7 +49,7 @@ class Client:
             self.token_cost = self.token_cost + len(tokens)
             # GPT-4o-mini API configuration
             client = OpenAI(
-                api_key=os.getenv("OPENAI_API_KEY")
+                api_key=OPENAI_API_KEY
             )
             completion = client.chat.completions.create(
                 model="gpt-4o-mini",
