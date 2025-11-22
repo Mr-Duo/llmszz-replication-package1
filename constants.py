@@ -1,9 +1,11 @@
 import os
 
 # enter your current working directory, absolute path.
-CWD = "/data/scratch/projects/punim1928/HUST/thesyx/llmszz-replication-package1"
+# CWD = "/data/scratch/projects/punim1928/HUST/thesyx/llmszz-replication-package1"
+CWD = ""
 # enter your directory which saves all repos
-REPOS_DIR = "/data/scratch/projects/punim1928/HUST/thesyx"
+# REPOS_DIR = "/data/scratch/projects/punim1928/HUST/thesyx"
+REPOS_DIR = ""
 
 DATASET_DIR = os.path.join(CWD,'dataset')
 SAVE_LOG_DIR = os.path.join(CWD,'save_logs')
