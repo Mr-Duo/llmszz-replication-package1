@@ -35,7 +35,7 @@ class Client:
             self.token_cost = self.token_cost + len(tokens)
             # GPT-4o-mini API configuration
             client = OpenAI(
-                api_key="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"
+                api_key="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"
             )
             completion = client.chat.completions.create(
                 model="gpt-4o-mini",
