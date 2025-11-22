@@ -1,5 +1,10 @@
 from openai import OpenAI
 import tiktoken
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 class Client:
@@ -35,7 +40,7 @@ class Client:
             self.token_cost = self.token_cost + len(tokens)
             # GPT-4o-mini API configuration
             client = OpenAI(
-                api_key="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"
+                api_key=os.getenv("OPENAI_API_KEY")
             )
             completion = client.chat.completions.create(
                 model="gpt-4o-mini",

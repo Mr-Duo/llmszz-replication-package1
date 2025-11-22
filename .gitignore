@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+save_logs/
+
+# Results
+deal_infos.json
+deal_infos_qwen.json
+err_infos.json
+err_infos_qwen.json
+file_statistics.json
+file_statistics_qwen.json
+vic_results.json
+vic_results_qwen.json
+model_comparison_summary.json
+vic_statistics_summary.json
+
+# OS
+.DS_Store
+Thumbs.db
