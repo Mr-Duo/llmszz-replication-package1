@@ -4,6 +4,12 @@ LLM4SZZ for Vulnerability-Introducing Commit (VIC) Discovery
 This script identifies vulnerability-introducing commits from a list of 
 vulnerability-fixing commits (VFC). It saves detailed logs and a summary 
 of all discovered VICs.
+
+Usage:
+  python llm4szz_vic.py [dataset_file.json]
+  
+Or set environment variable:
+  VFC_DATASET_FILE=dataset.json python llm4szz_vic.py
 """
 
 from constants import *
@@ -11,9 +17,21 @@ from llm import *
 from parse_patch import *
 from prompts import *
 from util import *
+import sys
 
-# Configuration - Update this to point to your VFC dataset
-VFC_DATASET_FILE = "vfc_dev_web_dataset.json"  # Converted dataset file (not .jsonl)
+# Configuration - Get dataset file from command line, environment, or default
+if len(sys.argv) > 1:
+    # Command line argument takes priority
+    VFC_DATASET_FILE = sys.argv[1]
+    print(f"Using dataset from command line: {VFC_DATASET_FILE}")
+elif os.getenv("VFC_DATASET_FILE"):
+    # Environment variable (useful for Kaggle)
+    VFC_DATASET_FILE = os.getenv("VFC_DATASET_FILE")
+    print(f"Using dataset from environment: {VFC_DATASET_FILE}")
+else:
+    # Default dataset
+    VFC_DATASET_FILE = "vfc_dev_web_dataset.json"
+    print(f"Using default dataset: {VFC_DATASET_FILE}")
 
 # Load VFC data
 all_info = []
