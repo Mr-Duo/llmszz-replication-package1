@@ -6,23 +6,36 @@ import sys
 # Try to load from Kaggle secrets first, then .env file
 OPENAI_API_KEY = None
 
+# Method 1: Try Kaggle secrets
 try:
     from kaggle_secrets import UserSecretsClient
     user_secrets = UserSecretsClient()
     OPENAI_API_KEY = user_secrets.get_secret("OPENAI_API_KEY")
-    print("✓ Loaded OPENAI_API_KEY from Kaggle Secrets")
+    if OPENAI_API_KEY:
+        print(f"✓ Loaded OPENAI_API_KEY from Kaggle Secrets (length: {len(OPENAI_API_KEY)})")
+    else:
+        print("⚠ Kaggle secret 'OPENAI_API_KEY' returned None or empty")
 except Exception as e:
-    # Fall back to .env file for local development
-    try:
-        from dotenv import load_dotenv
-        load_dotenv()
-        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    print(f"ℹ Kaggle secrets not available: {type(e).__name__}")
+    
+    # Method 2: Try environment variable (set directly in Kaggle)
+    if not OPENAI_API_KEY:
+        OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
         if OPENAI_API_KEY:
-            print("✓ Loaded OPENAI_API_KEY from .env file")
-        else:
-            print("⚠ Warning: .env file found but OPENAI_API_KEY is empty")
-    except Exception as e2:
-        print(f"⚠ Warning: Could not load .env file: {e2}")
+            print(f"✓ Loaded OPENAI_API_KEY from environment variable (length: {len(OPENAI_API_KEY)})")
+    
+    # Method 3: Try .env file for local development
+    if not OPENAI_API_KEY:
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+            OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+            if OPENAI_API_KEY:
+                print(f"✓ Loaded OPENAI_API_KEY from .env file (length: {len(OPENAI_API_KEY)})")
+            else:
+                print("⚠ .env file found but OPENAI_API_KEY is empty")
+        except Exception as e2:
+            print(f"ℹ Could not load .env file: {type(e2).__name__}")
 
 # Validate API key is available
 if not OPENAI_API_KEY:
@@ -33,11 +46,15 @@ if not OPENAI_API_KEY:
     print("  1. Click 'Add-ons' → 'Secrets' in the right sidebar")
     print("  2. Add a new secret with label: OPENAI_API_KEY")
     print("  3. Paste your OpenAI API key as the value")
+    print("  4. Make sure 'Secrets' is enabled in notebook settings")
     print("\nFor Local Development:")
     print("  1. Create a .env file in the project root")
     print("  2. Add: OPENAI_API_KEY=sk-proj-your-key-here")
     print("="*60 + "\n")
     sys.exit(1)
+else:
+    # Show confirmation that key is loaded
+    print(f"✓ API key ready: {OPENAI_API_KEY[:15]}...{OPENAI_API_KEY[-4:]}")
 
 
 class Client:
