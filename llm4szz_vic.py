@@ -13,7 +13,7 @@ from prompts import *
 from util import *
 
 # Configuration - Update this to point to your VFC dataset
-VFC_DATASET_FILE = "vfc_more_fixes_dataset.json"  # Converted dataset file (not .jsonl)
+VFC_DATASET_FILE = "vfc_dev_web_dataset.json"  # Converted dataset file (not .jsonl)
 
 # Load VFC data
 all_info = []
