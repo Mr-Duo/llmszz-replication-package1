@@ -51,10 +51,10 @@ vic_results = []  # Store VIC discoveries
 file_statistics = []  # Track statistics for each file
 pipeline = None
 
-# Run analysis (3 iterations for robustness)
-for cnt in range(0, 3):
+# Run analysis (1 iteration)
+for cnt in range(0, 1):
     print(f"\n{'='*60}")
-    print(f"Starting iteration {cnt + 1}/3")
+    print(f"Starting analysis...")
     print(f"{'='*60}\n")
     
     for idx, info in enumerate(all_info, 1):
