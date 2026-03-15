@@ -171,7 +171,7 @@ class Client:
 
             # Reinitialize model with system prompt if present
             model = genai.GenerativeModel(
-                model_name="gemini-2.0-flash",
+                model_name="gemini-2.5-flash",
                 system_instruction=system_prompt
             )
 
