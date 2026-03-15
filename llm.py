@@ -119,7 +119,7 @@ class Client:
         self.token_cost = 0
         # Configure Gemini
         genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel("gemini-2.0-flash")
+        self.model = genai.GenerativeModel("gemini-2.5-flash")
 
     def _convert_messages_to_gemini(self, all_msgs):
         """Convert OpenAI-style messages to Gemini format."""
