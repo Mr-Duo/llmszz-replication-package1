@@ -630,7 +630,7 @@ def get_root_cause_file_names(
         reply = client.call_llm(test_msgs, log_msgs, pipeline)
         # print(reply)
 
-        log_msgs.append({"role": "user", "content": root_cause_summary_text})
+        # log_msgs.append({"role": "user", "content": root_cause_summary_text})
 
         file_name, root_cause = get_names_info(reply)
         for patch_file in patch.get_files():
