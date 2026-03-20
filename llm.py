@@ -1,12 +1,18 @@
 # from openai import OpenAI
 # import tiktoken
+# import google.generativeai as genai
+# from google.api_core.exceptions import ResourceExhausted
+# from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
 import os
 import sys
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 # Try to load from Kaggle secrets first, then .env file
 OPENAI_API_KEY = None
 GEMINI_API_KEY = None
+GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 # Method 1: Try Kaggle secrets
 try:
@@ -66,6 +72,91 @@ elif OPENAI_API_KEY:
 else:
     print(f"✓ API key ready: {GEMINI_API_KEY[:15]}...{GEMINI_API_KEY[-4:]}")
 
+class Client:
+    def __init__(self) -> None:
+        self.call_cnt = 0
+        self.token_cost = 0
+        self.gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+
+    def _convert_messages(self, all_msgs):
+        """Convert OpenAI-style messages to Gemini format."""
+        system_instruction = None
+        contents = []
+
+        for msg in all_msgs:
+            role = msg["role"]
+            content = msg["content"]
+
+            if role == "system":
+                system_instruction = content
+            elif role == "user":
+                contents.append(types.Content(role="user", parts=[types.Part(text=content)]))
+            elif role == "assistant":
+                contents.append(types.Content(role="model", parts=[types.Part(text=content)]))
+
+        return system_instruction, contents
+
+    def call_llm(self, all_msgs, log_msgs, pipeline=None):
+        self.call_cnt += 1
+
+        # Trim messages if too long
+        while len(str(all_msgs)) > 30000:
+            all_msgs = all_msgs[1:]
+
+        if pipeline is not None:
+            terminators = [
+                pipeline.tokenizer.eos_token_id,
+                pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>"),
+            ]
+            outputs = pipeline(
+                all_msgs,
+                max_new_tokens=2048,
+                eos_token_id=terminators,
+                do_sample=True,
+                temperature=0.0,
+                top_p=0.9,
+            )
+            reply = outputs[0]["generated_text"][-1]["content"]
+            log_msgs.append({"role": "assistant", "content": reply})
+            return reply
+
+        else:
+            system_instruction, contents = self._convert_messages(all_msgs)
+
+            # Count input tokens
+            input_token_response = self.gemini_client.models.count_tokens(
+                model=GEMINI_MODEL,
+                contents=contents,
+            )
+            self.token_cost += input_token_response.total_tokens
+
+            # Build config
+            config = types.GenerateContentConfig(
+                temperature=0.0,
+                max_output_tokens=2048,
+                system_instruction=system_instruction,
+            )
+
+            response = self.gemini_client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=contents,
+                config=config,
+            )
+
+            reply = response.text
+
+            # Count output tokens
+            output_token_response = self.gemini_client.models.count_tokens(
+                model=GEMINI_MODEL,
+                contents=[types.Content(role="model", parts=[types.Part(text=reply)])],
+            )
+            self.token_cost += output_token_response.total_tokens
+
+            return reply
+
+    def get_call_cnt(self):
+        return self.call_cnt
+
 # class Client:
 #     def __init__(self) -> None:
 #         self.call_cnt = 0
@@ -113,90 +204,90 @@ else:
 #     def get_call_cnt(self):
 #         return self.call_cnt
 
-class Client:
-    def __init__(self) -> None:
-        self.call_cnt = 0
-        self.token_cost = 0
-        # Configure Gemini
-        genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel("gemini-2.5-flash")
+# class Client:
+#     def __init__(self) -> None:
+#         self.call_cnt = 0
+#         self.token_cost = 0
+#         # Configure Gemini
+#         genai.configure(api_key=GEMINI_API_KEY)
+#         self.model = genai.GenerativeModel("gemini-2.5-flash")
 
-    def _convert_messages_to_gemini(self, all_msgs):
-        """Convert OpenAI-style messages to Gemini format."""
-        gemini_history = []
-        system_prompt = None
+#     def _convert_messages_to_gemini(self, all_msgs):
+#         """Convert OpenAI-style messages to Gemini format."""
+#         gemini_history = []
+#         system_prompt = None
         
-        for msg in all_msgs:
-            role = msg["role"]
-            content = msg["content"]
+#         for msg in all_msgs:
+#             role = msg["role"]
+#             content = msg["content"]
             
-            if role == "system":
-                system_prompt = content  # handled separately
-            elif role == "user":
-                gemini_history.append({"role": "user", "parts": [content]})
-            elif role == "assistant":
-                gemini_history.append({"role": "model", "parts": [content]})
+#             if role == "system":
+#                 system_prompt = content  # handled separately
+#             elif role == "user":
+#                 gemini_history.append({"role": "user", "parts": [content]})
+#             elif role == "assistant":
+#                 gemini_history.append({"role": "model", "parts": [content]})
         
-        return gemini_history, system_prompt
+#         return gemini_history, system_prompt
 
-    def call_llm(self, all_msgs, log_msgs, pipeline=None, gemini_key=None):
-        self.call_cnt += 1
+#     def call_llm(self, all_msgs, log_msgs, pipeline=None, gemini_key=None):
+#         self.call_cnt += 1
 
-        # Trim messages if too long
-        while len(str(all_msgs)) > 30000:
-            all_msgs = all_msgs[1:]
+#         # Trim messages if too long
+#         while len(str(all_msgs)) > 30000:
+#             all_msgs = all_msgs[1:]
 
-        if pipeline is not None:
-            terminators = [
-                pipeline.tokenizer.eos_token_id,
-                pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>"),
-            ]
-            outputs = pipeline(
-                all_msgs,
-                max_new_tokens=2048,
-                eos_token_id=terminators,
-                do_sample=True,
-                temperature=0.0,
-                top_p=0.9,
-            )
-            reply = outputs[0]["generated_text"][-1]["content"]
-            log_msgs.append({"role": "assistant", "content": reply})
-            return reply
-        else:
-            # Override API key if provided
-            api_key = gemini_key or GEMINI_API_KEY
-            genai.configure(api_key=api_key)
+#         if pipeline is not None:
+#             terminators = [
+#                 pipeline.tokenizer.eos_token_id,
+#                 pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>"),
+#             ]
+#             outputs = pipeline(
+#                 all_msgs,
+#                 max_new_tokens=2048,
+#                 eos_token_id=terminators,
+#                 do_sample=True,
+#                 temperature=0.0,
+#                 top_p=0.9,
+#             )
+#             reply = outputs[0]["generated_text"][-1]["content"]
+#             log_msgs.append({"role": "assistant", "content": reply})
+#             return reply
+#         else:
+#             # Override API key if provided
+#             api_key = gemini_key or GEMINI_API_KEY
+#             genai.configure(api_key=api_key)
 
-            gemini_history, system_prompt = self._convert_messages_to_gemini(all_msgs)
+#             gemini_history, system_prompt = self._convert_messages_to_gemini(all_msgs)
 
-            # Reinitialize model with system prompt if present
-            model = genai.GenerativeModel(
-                model_name="gemini-2.5-flash",
-                system_instruction=system_prompt
-            )
+#             # Reinitialize model with system prompt if present
+#             model = genai.GenerativeModel(
+#                 model_name="gemini-2.5-flash",
+#                 system_instruction=system_prompt
+#             )
 
-            # Separate history from the latest user message
-            history = gemini_history[:-1]
-            last_message = gemini_history[-1]["parts"][0] if gemini_history else ""
+#             # Separate history from the latest user message
+#             history = gemini_history[:-1]
+#             last_message = gemini_history[-1]["parts"][0] if gemini_history else ""
 
-            # Count input tokens
-            input_token_count = model.count_tokens(str(all_msgs)).total_tokens
-            self.token_cost += input_token_count
+#             # Count input tokens
+#             input_token_count = model.count_tokens(str(all_msgs)).total_tokens
+#             self.token_cost += input_token_count
 
-            # Start chat session and send message
-            chat = model.start_chat(history=history)
-            response = chat.send_message(
-                last_message,
-                generation_config=genai.GenerationConfig(temperature=0.0)
-            )
+#             # Start chat session and send message
+#             chat = model.start_chat(history=history)
+#             response = chat.send_message(
+#                 last_message,
+#                 generation_config=genai.GenerationConfig(temperature=0.0)
+#             )
 
-            reply = response.text
+#             reply = response.text
 
-            # Count output tokens
-            output_token_count = model.count_tokens(reply).total_tokens
-            self.token_cost += output_token_count
+#             # Count output tokens
+#             output_token_count = model.count_tokens(reply).total_tokens
+#             self.token_cost += output_token_count
 
-            return reply
-
-    def get_call_cnt(self):
-        return self.call_cnt
+#             return reply
+    
+#     def get_call_cnt(self):
+#         return self.call_cnt
