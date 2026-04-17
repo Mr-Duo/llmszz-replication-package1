@@ -5,13 +5,13 @@ import glob
 # Configuration - Choose one of the following modes:
 
 # MODE 1: Convert a single VFC file
-SINGLE_FILE_MODE = False
-VFC_JSONL_FILE = "dataset/VFC/vfc_cvefixes.jsonl"  # Path to your VFC JSONL file
-REPO_NAME = "openssl"  # e.g., "linux", "FFmpeg", "openssl", etc.
-OUTPUT_FILE = "dataset/vfc_dataset.json"
+SINGLE_FILE_MODE = True
+VFC_JSONL_FILE = os.environ.get("VFC_JSONL_FILE", None)  # Path to your VFC JSONL file
+REPO_NAME = os.environ.get("REPO_NAME", None)  # e.g., "linux", "FFmpeg", "openssl", etc.
+OUTPUT_FILE = f"dataset/{str(os.path.basename(VFC_JSONL_FILE)).replace('.jsonl', '_dataset.json')}" if VFC_JSONL_FILE else None
 
 # MODE 2: Convert all VFC files in the VFC folder (creates separate output files)
-BATCH_MODE = True
+BATCH_MODE = False
 VFC_FOLDER = "dataset/VFC"
 BATCH_OUTPUT_FOLDER = "dataset"  # Output folder for converted files
 
