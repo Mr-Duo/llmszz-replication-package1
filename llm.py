@@ -1,8 +1,8 @@
 # from openai import OpenAI
 # import tiktoken
 # import google.generativeai as genai
-# from google.api_core.exceptions import ResourceExhausted
-# from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from google.api_core.exceptions import ResourceExhausted
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 import os
 import sys
@@ -77,7 +77,7 @@ class Client:
         self.call_cnt = 0
         self.token_cost = 0
         self.gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-
+        
     def _convert_messages(self, all_msgs):
         """Convert OpenAI-style messages to Gemini format."""
         system_instruction = None
@@ -96,7 +96,7 @@ class Client:
 
         return system_instruction, contents
 
-    def call_llm(self, all_msgs, log_msgs, pipeline=None):
+    def _call_llm_backoff(self, all_msgs, log_msgs, pipeline=None):
         self.call_cnt += 1
 
         # Trim messages if too long
@@ -153,6 +153,14 @@ class Client:
             self.token_cost += output_token_response.total_tokens
 
             return reply
+    
+    @retry(
+        retry=retry_if_exception_type(ResourceExhausted),  # 429 equivalent
+        wait=wait_exponential(multiplier=1, min=2, max=60), # 2s, 4s, 8s... up to 60s
+        stop=stop_after_attempt(5),
+    )
+    def call_llm(client, criterion_msgs, log_msgs, pipeline):
+        return client._call_llm_backoff(criterion_msgs, log_msgs, pipeline)
 
     def get_call_cnt(self):
         return self.call_cnt

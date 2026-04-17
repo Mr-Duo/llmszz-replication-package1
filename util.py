@@ -12,13 +12,9 @@ import json
 from prompts import *
 from llm import *
 import random
-from openai import OpenAI
-import transformers
-import torch
 import os
 from openai import OpenAI
 import os
-from pydriller import ModificationType, GitRepository as PyDrillerGitRepo
 from parse_patch import *
 
 import time

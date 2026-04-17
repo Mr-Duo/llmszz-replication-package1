@@ -45,7 +45,7 @@ def convert_vfc_to_dataset(vfc_file, repo_name, output_file):
                     continue
                 
                 # Auto-detect repository name from entry if available
-                detected_repo = entry.get("project") or entry.get("Repository") or repo_name
+                detected_repo = entry.get("project") or entry.get("Repository") or entry.get("repo_name") or repo_name
                 
                 # Extract additional metadata if available
                 metadata = {
